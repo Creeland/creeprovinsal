@@ -7,7 +7,7 @@ categories: ['test']
 keywords: ['test']
 banner: './images/banner.jpg'
 published: false
-author: 'author'
+author: 'Creeland Provinsal'
 redirects:
   - '/invisible-post-423123'
 ---

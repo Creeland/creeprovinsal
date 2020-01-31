@@ -1,0 +1,105 @@
+---
+slug: rails-notes-chapter-four
+date: 2020-01-31
+title: 'Ruby on Rails Tutorial - Chapter Four Notes'
+description: "Bullet notes for Ruby on Rails Tutorial's Chapter 5"
+published: true
+banner: './banner.png'
+author: 'Creeland Provinsal'
+---
+- **4.0 - 4.1**
+    - stylesheet_link_tag brings in stylesheets
+    - Methods in helpers are automatically available in their corresponding views
+    - Web pages ultimately consist of strings sent over to the browser
+    - A string created with quotes is called a __string literal__
+    - You can concatenate strings with the **+** operator
+    - You can evaluate code within strings using string __interpolation__. You can do that with the **#{}** syntax
+    - **puts** is pronounced "put ess" for "puts string". Who knew?
+    - **puts** prints to the console in ruby
+    - **puts** operates as a __side effect__. That means that the program does more outside of itself than just return a value
+    - **puts** places a newline character at the end of the string when it is printed. **print** does not place a newline character at the end of the string
+    - **\n** typically represents a newline of blank space
+    - Ruby does not support interpolation inside single quoted strings
+        - They are useful because they are truly literal. They only contain exactly the characters that your write
+    - **\\** are used in double quoted strings to __escape__ special characters so that they are only used as a character
+- **4.2**
+    - Everything in Ruby is an object
+    - Objects are things that respond to messages
+    - Methods are functions stored in objects. 
+    - Messages include the method calls on objects
+    - the ? character at the end of a method indicates that the return value is a **boolean**
+    - Booleans are useful for control flow such as if else branching
+    - **elsif** is used if there is more than one clause in an if/else 
+    - You can put **if** after a statement and that statement will only be evaluated if **if** returns true
+        - **unless** works the same way but reversed
+    - Everything in Ruby is true except for **nil** and **false**
+    - **==** is the comparison operator
+- **4.2.3**
+    - If you provide a default argument to a function parameter you are free to omit that parameter when calling the function
+    - In ruby functions return the last statement that gets evaluated
+    - If a function has no return value it returns **nil**
+    - __Modules__ are a way to package ruby methods which can then be __mixed in__ to ruby classes using the **include** keyword 
+- **4.3**
+    - **.split** gets arrays from strings
+        - By default it splits on whitespace but you can set it to split on whatever character you want
+    - Access elements in an array with square brackets
+        - You can also access elements using **first** **second** and **last**
+        - You can also use negative numbers in square brackets to access elements starting from the last element in descending order
+    - Arrays respond to a number of methods
+        - empty? include? sort reverse shuffle
+        - None of these change the array itself
+    - Use bang **!** methods to mutate the array
+    - **<<** this is called a shovel operator. It pushes elements to the end of an array
+        - **.push** does the same thing
+    - The reverse of **.split** is **.join**. It joins together the elements of an array into a string
+    - A range is similar to an array. 
+        - 0..9 Without parenthesis you can only operate on the last element of the range
+        - (0..9) wrapping in parenthesis lets you operate on the entire range
+        - ranges work with characters
+    - **%w** creates an array of strings
+    - Certain methods can accept blocks. 
+    - Blocks can be more than one line and can accept parameters
+    - You can create a block with either {} curly braces or the **do end** syntax
+    - Pass parameters to the block using pipes **|params|**
+- **4.3.3**
+    - Hashes are like arrays that aren't limited to integer indices. You can use almost any object as a key
+    - If order matters use an array. Hashes don't keep order
+    - It's more standard to use symbols as keys as opposed to strings
+    - You can think of symbols as strings without the extra baggage
+    - Both of these syntaxes create hashes with symbol keys. The second case is a special syntax ruby added to streamline creating symbol keyed hashes.
+        - { :key => value }
+        - { key: value }
+    - Hashes can be nested. 
+    - Hashes have the each method that takes a block with key and value as parameters
+    - The **inspect** method returns a string of the literal version of the object that it is called on
+        - The shortcut for **inspect** is **p**
+            - p :symbol
+    - In ruby parenthesis are optional
+    - When key value pairs are the __last__ arguments in a function call you can omit the brackets
+    - These two function calls are equivalent 
+        - `stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'`
+        - `stylesheet_link_tag('application', { :media => 'all', 'data-turbolinks-track' => 'reload' })`
+- **4.4** 
+    - Classes are like blueprints for objects
+    - "example" creating a string with quotes in this fashion is called a __literal constructor__
+    - `s = String.new("example")` creating a string with the class name and `.new` keyword is called the __named constructor__
+    - The `.new` method is a __class method__ since it is called on the class itself
+        - The `.new` method creates an __instance__ of a class. Objects are __class instances__
+    - Methods that operate on class instances are called __instance methods__
+    - All ruby object inherit from a parent `Object` class. This is why "everything in ruby is an object".
+    - The `Object` class inherits from the `BasicObject` class. `BasicObject` doesn't inherit from anything
+    - `ChildClass < ParentClass` is the syntax for inheritance
+    - Child classes have access to all the methods of their parents
+    - Ruby classes can be modified
+    - Controller actions don't have return values
+    - Rails only __looks__ like Ruby but you can't treat them the same way. You have  to study Rails as its own thing
+    - Rails automagically includes modules where they need to go using its conventions
+    - Instances variables are only available inside their class unless an __accessor__ method is used. `attr_accessor :instance_variable`
+    - instance variables in controllers are automagically available in their corresponding views
+    - The `initialize` method is called on a class with the `.new` class method
+    - Use `require` in the console to bring a file in
+    - Initializing objects with a single hash argument is called __mass assignment__
+- **4.5**
+    - Define methods with **def**
+    - Blocks allow natural iteration over enumerable data structures
+
