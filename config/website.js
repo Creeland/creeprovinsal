@@ -5,7 +5,7 @@ module.exports = {
   siteTitleShort: 'Creeland Blog', // short_name for manifest
   siteUrl: 'https://creeprovinsal.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  siteLogo: 'images/logo.png', // Used for SEO and manifest, path to your image you placed in the 'static' folder
+  siteLogo: '../static/images/logo.png', // Used for SEO and manifest, path to your image you placed in the 'static' folder
   siteDescription: "Creeland Provinsal's Blog",
   author: 'Creeland Provinsal', // Author for schemaORGJSONLD
   organization: 'egghead.io LLC',
