@@ -6,7 +6,7 @@ module.exports = {
   siteUrl: 'https://creeprovinsal.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: 'images/logo.png', // Used for SEO and manifest, path to your image you placed in the 'static' folder
-  siteDescription: 'I like to share my notes!',
+  siteDescription: "Creeland Provinsal's Blog",
   author: 'Creeland Provinsal', // Author for schemaORGJSONLD
   organization: 'egghead.io LLC',
 
